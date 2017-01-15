@@ -22,7 +22,8 @@ public class Main {
             SocketAddress port = new InetSocketAddress(14204);
             server.socket().bind(port);
             server.configureBlocking(true);
-
+            System.out.println("Host: " +InetAddress.getLocalHost());
+            
             /*создали селектор для мультиплексированного доступа*/
             Selector selector = Selector.open();
             int operations = SelectionKey.OP_READ;
